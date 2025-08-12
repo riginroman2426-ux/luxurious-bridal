@@ -12,11 +12,13 @@ const avif = require('gulp-avif');
 const newer = require('gulp-newer');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
-const svgmin = require('gulp-svgmin');
+const svgstore = require('gulp-svgstore');
+
+
 
 function sprites() {
-  return src('app/images/sprites/*.svg')
-  .pipe(svgmin())
+  return src('app/images/sprite/*.svg')
+  .pipe(svgstore())
   .pipe(dest('app/images'))
 }
 
@@ -56,7 +58,7 @@ function images() {
 
 
 function styles() {
-  return src('app/scss/style.scss')
+  return src('app/scss/*.scss')
     .pipe(autoprefixer())
     .pipe(concat('style.min.css'))
     .pipe(scss({
@@ -84,7 +86,7 @@ function watching() {
       baseDir: 'app'
     },
   });
-  watch(['app/scss/style.scss'], styles);
+  watch(['app/scss/*.scss'], styles);
   watch(['app/js/main.js'], scripts);
   watch(['app/images/src/*.*'], images);
   watch(['app/images/sprite/*.*'], sprites);
