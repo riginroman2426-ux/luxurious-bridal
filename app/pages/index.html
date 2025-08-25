@@ -1,9 +1,9 @@
 <!--= include promo.html -->
 <!--= include header.html -->
 <main class="main">
-  <section class="top" style="background-image: image-set(url('../images/top-bg.avif') type('image/avif'),
-      url('../images/top-bg.webp') type('image/webp'),
-      url('../images/top-bg.jpg'));
+  <section class="top" style="background-image: image-set(url('images/top-bg.avif') type('image/avif'),
+      url('images/top-bg.webp') type('image/webp'),
+      url('images/top-bg.jpg'));
   min-height: 90vh;
   background-repeat: no-repeat;
   background-size: cover;">
@@ -16,5 +16,48 @@
       </div>
     </div>
   </section>
+  <section class="new-collection">
+    <div class="container">
+      <div class="new-collection__inner">
+        <div class="new-collection__content">
+          <h2 class="new-collection__title">
+            NEW COLLECTION
+          </h2>
+          <p class="new-collection__text">
+            Discover our new collection of wedding dresses that impresses with its beauty and elegance.
+          </p>
+          <p class="new-collection__text">
+            Each dress in this collection is crafted with love for detail and expertly executed to the highest standards
+            of quality.
+          </p>
+          <p class="new-collection__text">
+            Regardless of your style and preferences, in our collection, you will find the dress of your dreams – from
+            classic
+            silhouettes to modern and original designs.
+          </p>
+          <a class="new-collection__link" href="#">
+            View the collection
+          </a>
+        </div>
+        <picture class="new-collection__img">
+          <source srcset="images/new-coll-1.avif" type="image/avif">
+          <source srcset="images/new-coll-1.Webp" type="image/Webp">
+          <img src="images/new-coll-1.jpg" alt="Alt text">
+        </picture>
+        <div class="new-collection__box">
+          <picture class="new-collection__box-img">
+            <source srcset="images/new-coll-2.avif" type="image/avif">
+            <source srcset="images/new-coll-2.Webp" type="image/Webp">
+            <img src="images/new-coll-2.jpg" alt="Alt text">
+          </picture>
+        </div>
+        <p class="new-collection__cartion">
+          Allow yourself to be enchanted by our wedding dresses and create a unique look for your most important day.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!--= include join-us.html -->
 </main>
+
 <!--= include footer.html -->
