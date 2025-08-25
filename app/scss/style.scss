@@ -196,3 +196,135 @@ body {
     align-self: start;
   }
 }
+
+.new-collection {
+  background-image: url('../images/top-svg.svg');
+  background-repeat: no-repeat;
+  background-position: 230px -40%;
+
+  &__inner {
+    padding: 150px 0;
+    display: flex;
+  }
+
+  &__content {
+    max-width: 492px;
+    padding: 75px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    color: vars.$color-text-muted;
+  }
+
+  &__link {
+    margin-top: auto;
+    font-size: 16px;
+    color: vars.$color-text-muted;
+    padding: 10px 65px;
+    border: 1px solid vars.$bg-primary;
+    align-self: start;
+  }
+
+  &__img {
+    padding-top: 75px;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__box-img {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    max-width: fit-content;
+  }
+
+  &__cartion {
+    margin-top: auto;
+    margin-bottom: 40px;
+    color: vars.$color-text-muted;
+    width: 290px;
+  }
+}
+
+.join-us {
+  background-color: vars.$bg-primary;
+
+  &__inner {
+    display: flex;
+    padding: 0 40px;
+    gap: 40px;
+  }
+
+  &__img {
+    max-width: 540px;
+  }
+
+  &__box {
+    padding: 35px 0;
+  }
+
+  &__title {
+    font-size: 45px;
+    margin-bottom: 20px;
+    @extend %lora-400;
+  }
+
+  &__text {
+    font-size: 30px;
+    margin-bottom: 40px;
+    @extend %lora-400;
+    color: vars.$color-primary;
+  }
+
+  &__form {
+    margin-bottom: 0;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid vars.$color-text-muted;
+    padding-bottom: 10px;
+    background-color: transparent;
+    @extend %open-sans-400;
+    color: vars.$color-text-muted;
+  }
+
+  &__input+.join-us__input {
+    margin-top: 10px;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    background-color: vars.$color-accent;
+    padding: 12px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  &__form-caption {
+    font-size: 11px;
+  }
+}
