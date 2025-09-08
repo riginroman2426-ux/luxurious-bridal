@@ -21,7 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # якщо gulp треба запускати для збірки (наприклад, копіювання, мінімізація і т.д.)
       - name: Build project with Gulp
         run: npx gulp build || echo "no build step"
 
@@ -37,11 +36,10 @@ jobs:
       pages: write
       id-token: write
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
+      - name: Download artifact
+        uses: actions/download-pages-artifact@v2
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
