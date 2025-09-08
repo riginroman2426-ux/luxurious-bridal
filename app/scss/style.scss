@@ -1375,12 +1375,12 @@ body {
   width: 100%;
   max-width: 1500px;
   margin: 0 auto 25px;
-  overflow: hidden; // можна залишити тут
+  overflow: hidden;
 }
 
 .reviews-slider .swiper-slide {
   flex-shrink: 0;
-  width: auto; // або конкретну ширину (наприклад 180px), якщо треба 8 в ряд
+  width: auto;
 }
 
 .reviews-rating {
